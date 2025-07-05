@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Trujillo</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon">
+      <style>
+    /* Estilos para la sección FAQ */
+/* FAQ Moderna - acordeón estilo tarjetas */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 3em 2em;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  color: #B4022D;
+}
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 0.75em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-item input {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #B4022D;
+  color: white;
+  font-size: 1.1em;
+  position: relative;
+}
+
+.faq-question .arrow::before {
+  content: '▼';
+  transition: transform 0.3s ease;
+}
+
+.faq-item input:checked + .faq-question .arrow::before {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1em;
+  background-color: #fff;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item input:checked ~ .faq-answer {
+  max-height: 300px;
+  padding: 1em;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .faq-question {
+    font-size: 1em;
+  }
+}
+
+  </style>
+
+</head>
+    <body>
+            <header class="hero">
+        <nav class="navbar">
+            <h1 class="logo">Caja Trujillo</h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Ofrecemos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="pages/preguntasfrequentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+                <li><a href="#ubicacion">Ubícanos</a></li>
+                <li><a href="pages/nuestrosProductos.html">Nuestros Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+        
+                <section id="preguntas" class="faq-section">
+            <h2>Preguntas Frecuentes</h2>
+            <div id="faq" class="faq-container">
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1">
+                    <label class="faq-question" for="faq1">
+                        ¿Qué es una Caja Municipal de Ahorro?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Es una entidad financiera que brinda servicios de ahorro, crédito y otros productos financieros con un enfoque local y comunitario.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq2">
+                    <label class="faq-question" for="faq2">
+                        ¿Quiénes pueden abrir una cuenta de ahorros?
+                         <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Cualquier persona natural o jurídica que cumpla con los requisitos mínimos puede abrir una cuenta de ahorros.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq3">
+                    <label class="faq-question" for="faq3">
+                        ¿Qué documentos necesito para abrir una cuenta?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Debes presentar tu documento de identidad vigente y un recibo de servicio público para validar tu dirección.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq4">
+                    <label class="faq-question" for="faq4">
+                        ¿La Caja ofrece préstamos personales?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Sí, ofrecemos préstamos personales con tasas competitivas y planes flexibles de pago.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq5">
+                    <label class="faq-question" for="faq5">
+                        ¿Puedo realizar operaciones en línea?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Sí, contamos con una plataforma de banca en línea para que puedas hacer consultas y operaciones de manera segura.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq6">
+                    <label class="faq-question" for="faq6">
+                        ¿Cuál es el horario de atención?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Atendemos de lunes a viernes de 9:00 a.m. a 5:00 p.m. y sábados de 9:00 a.m. a 1:00 p.m.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq7">
+                    <label class="faq-question" for="faq7">
+                        ¿Tienen seguros vinculados a los créditos?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Sí, todos nuestros créditos incluyen seguros de desgravamen y otros opcionales según el producto.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq8">
+                    <label class="faq-question" for="faq8">
+                        ¿Qué beneficios tengo al ahorrar en la Caja?
+                        <span class="arrow"></span>
+                    </label>
+                    <div class="faq-answer">
+                        Obtienes intereses sobre tus depósitos, seguridad financiera, y acceso a otros productos como créditos y programas de fidelización.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
